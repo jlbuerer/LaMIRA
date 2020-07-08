@@ -3,6 +3,8 @@ Lariat Mapping by Inverted Read Alignment
 
 This pipeline identifies RNA-seq reads that originate from lariats. Through iterative alignment, reads are called that contain adjacent segments that map to a 5' splice site and a downstream intronic segment (see figure below). This inverted alignment is a result of RT transcribing from a lariat and reading through the branchpoint. Once lariat reads are identified, post-processing scripts analyze the branchpoints implied by the read mapping. 
 
+![alt text](https://github.com/jlbuerer/LaMIRA/blob/master/alignment_diagram.png?raw=true)
+
 ## Dependencies
 
 Requires the following:

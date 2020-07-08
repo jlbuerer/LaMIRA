@@ -4,7 +4,7 @@ $bp_dir = $ARGV[0];
 open (FH, "$bp_dir/BP_table_4_final.txt") or die $!;
 
 open (FHout, ">$bp_dir/BP_table_5_final.txt") or die $!;
-
+print FHout "chrom\tcoord\tstrand\tmodel\tbp_seq\tbp_nt\tthreep_ss\tthreep_dist\tbp_pos\ttotal_reads\tunique_reads\tmut_qc\tmulti_qc\ttotal_reads_pos\tunique_reads_pos\ttotal_mut_pos\tunique_mut_pos\tsources\n"
 while (<FH>){
 	($chrom,$bp,$strand,$motif,$seq,$bpnt,$threess,$bpdist,$pos,$count,$countuniq,$q1,$q2,$c1,$c2,$m1,$m2,$files)=(split /\t/,$_); chomp $files;
 	my %fs;

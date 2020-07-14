@@ -70,7 +70,7 @@ The final analyzed branchpoint data is output to ```<out_dir>/bp_processing/BP_f
 | 5 | bp_seq | Branchpoint Sequence - parentheses around bulge, BP nucleotide	is left of * |
 | 6 | bp_nt | Branchpoint nucleotide |
 | 7 | threep_ss | Closest 3' splice site downstream of branchpoint coordinate |
-| 8 | threep_dist | Distance from branchpoint to 3'splice site |
+| 8 | threep_dist | Distance from branchpoint to 3' splice site |
 | 9 | bp_pos | Branchpoint distance category, one of: proximal (BP is between -1 and -10bps upstream of 3'SS), expected (BP is between -11 and -60bps upstream of  3'SS), distal (BP is >60bps upstream of  3'SS), circle (BP is an annotated 3'SS) |
 | 10 | total_reads | The total number of reads supporting this branchpoint |
 | 11 | unique_reads | The number of unique reads supporting this branchpoint |

@@ -27,7 +27,7 @@ Requires the following:
  | bowtie_index | Basename of bowtie-indexed genome (i.e. /path/to/dir/genome where /path/to/dir/genome.fa is the genome fasta) |
  | gtf_file | GTF file containing annotated exons |
  | threads | The number of threads available for use |
- | out_dir | Writes output to out_dir/lariat_reads |
+ | out_dir | Writes output to ```<out_dir>/lariat_reads``` |
  
  \
  The next step uses ```process_BPs.sh``` to analyze the lariat reads identified by ```map_lariats.sh``` and output the final branchpoint table. This step requires fewer resources so it should be fine with just one or two threads.
@@ -37,7 +37,7 @@ Requires the following:
  | Option | Description |
  |--------|-------------|
  | bowtie_index | Basename of bowtie-indexed genome (i.e. /path/to/dir/genome where /path/to/dir/genome.fa is the genome fasta) |
- | out_dir | Writes output to out_dir/bp_processing |
+ | out_dir | Writes output to ```<out_dir>/bp_processing``` |
  | read_len | Length of reads |
  | threads| The number of threads available for use |
  

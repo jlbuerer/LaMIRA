@@ -127,7 +127,7 @@ if __name__ == '__main__':
 		t.join()
 
 	out_lines = [t.out_lines for t in threads]
-	with open(lariat_table.replace('.txt', '_wReadSeq_test.txt'), 'w') as out_file:
+	with open(lariat_table.replace('.txt', '_wReadSeq.txt'), 'w') as out_file:
 		for line_list in out_lines:
 			for line in line_list:
 				out_file.write(line)

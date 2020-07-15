@@ -11,7 +11,7 @@ This pipeline was developed by Allison Taggart and Luke Buerer. It implements th
 
 Requires the following:
  - perl (tested with 5.20.2)
- - python (tested with 3.7.6)
+ - python3 (tested with 3.7.6)
  - bowtie (tested with 1.1.1)
  - bedtools (tested with 2.29.2)
  - [python-Levenshtein (tested with 0.12.0)](https://pypi.org/project/python-Levenshtein/)
@@ -57,7 +57,7 @@ Requires the following:
  | 6 | Strand |
  | 7 | 5' splice site coordinate |
  | 8 | 3' splice site coordinate |
- | 9 | Branchpoint coordiinate |
+ | 9 | Branchpoint coordinate |
  | 10 | Raw branchpoint sequence (10 nt window, position 5 is the BP) |
  
 \

@@ -51,7 +51,7 @@ perl ./bp_processing_scripts/make_matrices.pl $bp_dir/fivepr_window_coords_sorte
 perl ./bp_processing_scripts/score_ts.pl $bp_dir/bp_ds_TS_window_coords_sorted_uniq_seq.txt ./patser $bp_dir/TS/fivepr_matrices $bp_dir/TS
 
 echo "$(date +'%m/%d %H:%M:%S') - Mapping lariat read mutations"
-python ./bp_processing/map_mutation_python.py $read_dir/lariat_data_table.txt $genome_fasta $read_len $threads
+python3 ./bp_processing/map_mutation_python.py $read_dir/lariat_data_table.txt $genome_fasta $read_len $threads
 #perl ./perl_scripts/map_mutation.pl $read_dir/lariat_data_table.txt $genome_fasta
 
 echo "$(date +'%m/%d %H:%M:%S') - Outputting final BP table"

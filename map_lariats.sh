@@ -19,7 +19,7 @@ out_dir=$6
 read_dir=$out_dir/lariat_reads
 
 if [[ ! -f $bowtie_index"_ss_table.txt" || ! -f $bowtie_index"_introns.bed" ]]; then
-    python ./mapping_scripts/create_SS_and_intron_tables.py $gtf_file $bowtie_index
+    python3 ./mapping_scripts/create_SS_and_intron_tables.py $gtf_file $bowtie_index
 fi
 
 perl ./mapping_scripts/find_lariats.pl -l $read_len -f $read_file -i $bowtie_index -t $threads -o $read_dir

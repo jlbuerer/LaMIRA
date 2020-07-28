@@ -18,6 +18,23 @@ out_dir=$6
 
 read_dir=$out_dir/lariat_reads
 
+if [[ ! -d $out_dir ]]; then
+	mkdir $out_dir
+fi
+if [[ ! -d $read_dir ]]; then
+	mkdir $read_dir
+fi
+
+read_file_dir=$(dirname -- "$read_file")
+read_file_base=$(basename -- "$read_file")
+extension="${read_file_base##*.}"
+
+if [[ $extension == "gz" ]]; then
+	gunzip -c $read_file > $read_dir/seq.fastq
+else
+	cp $read_file $read_dir/seq.fastq
+fi
+
 if [[ ! -f $bowtie_index"_ss_table.txt" || ! -f $bowtie_index"_introns.bed" ]]; then
     python ./mapping_scripts/create_SS_and_intron_tables.py $gtf_file $bowtie_index
 fi

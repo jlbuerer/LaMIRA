@@ -20,7 +20,7 @@ Requires the following:
  
  The pipeline is split into two steps. First, lariat mapping is performed by ```map_lariats.sh```. This is the computationally expensive step so dedicate more threads to it for faster processing.
  ```
- sh map_lariats.sh <read_file> <read_len> <bowtie_index> <gtf_file> <threads> <out_dir>
+ bash map_lariats.sh <read_file> <read_len> <bowtie_index> <gtf_file> <threads> <out_dir>
  ```
  | Option | Description |
  |--------|-------------|
@@ -34,7 +34,7 @@ Requires the following:
  \
  The next step uses ```process_BPs.sh``` to analyze the lariat reads identified by ```map_lariats.sh``` and output the final branchpoint table. This step requires fewer resources so it should be fine with just one or two threads.
  ```
- sh process_BPs.sh <bowtie_index> <out_dir> <read_len> <threads>
+ bash process_BPs.sh <bowtie_index> <out_dir> <read_len> <threads>
  ```
  | Option | Description |
  |--------|-------------|

@@ -13,20 +13,10 @@ sub new
         _readlen => shift,
         _minfraglen => shift,
         _threadnum => shift,
-	_outdir => shift,
+	    _outdir => shift,
     };
-    
-    print "\n\n****************\nparsing fastq files\n\n";
-    
-    $self->{_rawfile} =~ /(.+).fa?s?t?q/;
-    $self->{_base} = $1;
+        
     $self->{_file}=$self->{_outdir}."/seq.fastq";
-    
-    $mkdir = "mkdir ".$self->{_outdir};
-    $cp = "cp ".$self->{_rawfile}." ".$self->{_file};
-    
-    system($mkdir);
-    system($cp);
     
     bless $self, $class;
     return $self;
